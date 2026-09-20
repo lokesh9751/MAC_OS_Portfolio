@@ -7,18 +7,18 @@ const Gitcard = ({data = {id:1,image:"",title:"",description:"",tags:[],repoLink
     return (
         <div className="card">
             <img src={data.image} />
-            <p>{data.title}</p>
+            <h1>{data.title}</h1>
             <p>{data.description}</p>
 
             <div className="tags">
                 {
-                    data.tags.map(tag => <p className='tags-        indi'>{tag}</p>)
+                    data.tags.map(tag => <p className='tags-indi' key={tag}>{tag}</p>)
                 }
             </div>
 
             <div className="links">
-                <a href={data.repoLink}></a>
-                <a href={data.demoLink}></a>
+                <a target='_blank' href={data.repoLink}>Repo</a>
+                <a target='_blank' href={data.demoLink}>Demo</a>
             </div>
         </div>
     )
@@ -29,7 +29,7 @@ const Github = () => {
     <MoveWindows>
         <div className="cards">
             {github.map(project => {
-                return <Gitcard data={project}/>   
+                return <Gitcard key={project.id} data={project}/>   
             })}
         </div>
     </MoveWindows>

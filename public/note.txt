@@ -1,0 +1,47 @@
+/**
+ * @file: profile.config.js
+ * @author: Lokesh Harbola
+ * @summary: Frontend Developer
+ */
+
+// --------------------------------------------------
+// 1. CORE DEPENDENCIES & SKILLS
+// --------------------------------------------------
+
+const TECH_STACK = {
+  frontend: [
+    "HTML",
+    "CSS",
+    "SCSS",
+    "Tailwind CSS",
+    "JavaScript",
+    "React.js",
+  ],
+
+  tools: ["Figma", "Git", "GitHub"]
+};
+
+// --------------------------------------------------
+// 2. ACADEMIC BACKGROUND
+// --------------------------------------------------
+
+const education = new Map<string, string>([
+  ["Graphic Era Hill University", "8.7 SGPA"]
+]);
+
+// --------------------------------------------------
+// 3. DEVELOPER STATUS
+// --------------------------------------------------
+
+const profile = {
+  role: "Frontend Developer",
+  status: "Open to Opportunities",
+  interests: [
+    "Responsive Web Design",
+    "Interactive User Interfaces",
+    "Frontend Development",
+    "Creative Web Experiences",
+  ],
+};
+
+export default profile;

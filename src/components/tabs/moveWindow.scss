@@ -2,18 +2,28 @@
     background-color: rgba(18, 18, 18, 0.76);
     backdrop-filter: blur(15px);
     color: white;
-    width: 700px;
+
     height: 100%;
+    width: 100%;
+    min-height: 0;
 
     border-radius: 10px;
-
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    // padding-bottom: 1rem;
     .nav{
+        position: relative;
+        flex-shrink: 0;
+        
         padding-inline: 0.8rem;
         padding-block: 0.5rem;
 
         display: flex;
         align-items: center;
         gap: 3rem;
+
+        border-bottom: 1px solid white;
 
         .small-buttons{    
             display: flex;
@@ -48,7 +58,13 @@
     }
 
     .content{
-        // overflow: hidden;
-
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+    
+    }
+    .content::-webkit-scrollbar{
+        display: none;
     }
 }
