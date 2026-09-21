@@ -6,7 +6,7 @@ import { anOldHope, docco, xt256 } from 'react-syntax-highlighter/dist/esm/style
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-const Notes = () => {
+const Notes = ({tab_naam,setWindowState}) => {
     const [markdown, setMarkdown] = useState(null)
     useEffect(() => {
       fetch("/note.txt")
@@ -16,7 +16,7 @@ const Notes = () => {
     
   return (
     <div>
-        <MoveWindows>
+        <MoveWindows tab_naam={tab_naam} setWindowState={setWindowState} tab_name={'lokesh - notes'}>
             <div className="note-window">
                 {markdown ? <SyntaxHighlighter language="javascript" style={xt256}>{markdown}</SyntaxHighlighter> : <p>Loading.......</p>}
             </div>

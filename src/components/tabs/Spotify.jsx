@@ -1,8 +1,8 @@
 import MoveWindows from './MoveWindows'
 import './spotify.scss'
-const Spotify = () => {
+const Spotify = ({tab_naam,setWindowState}) => {
     return (
-        <MoveWindows>
+        <MoveWindows tab_naam={tab_naam} setWindowState={setWindowState} tab_name={'lokesh - spotify'}>
             <div className="spotify-tab">
                 <iframe
                     title="Spotify Playlist"
