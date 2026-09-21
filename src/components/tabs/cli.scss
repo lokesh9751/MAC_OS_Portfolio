@@ -10,3 +10,13 @@
         display: none;
     }
 }
+
+@media (max-width: 767px) {
+    .terminal-window {
+        div[name='react-console-emulator'] {
+            font-size: 0.8rem !important;
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+    }
+}

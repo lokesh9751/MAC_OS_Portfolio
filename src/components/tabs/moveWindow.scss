@@ -118,3 +118,19 @@
         display: none;
     }
 }
+
+@media (max-width: 767px) {
+    .main-content {
+        border-radius: 8px;
+
+        .nav {
+            gap: 1rem;
+            padding-inline: 0.5rem;
+            padding-block: 0.4rem;
+
+            .terminal_location p {
+                font-size: 0.7rem;
+            }
+        }
+    }
+}

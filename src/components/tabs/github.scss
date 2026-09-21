@@ -69,3 +69,29 @@
     // background-color: ;
     font-family: jetbrains_normal;
 }
+
+@media (max-width: 767px) {
+    .card img {
+        width: 100%;
+        height: auto;
+        max-width: 20rem;
+    }
+
+    .card h1 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+    }
+
+    .tags {
+        gap: 0.5rem;
+    }
+
+    .tags-indi {
+        font-size: 0.75rem;
+        padding-inline: 0.4rem;
+        padding-block: 0.3rem;
+    }
+}

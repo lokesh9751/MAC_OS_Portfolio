@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { Rnd } from "react-rnd";
 import './moveWindow.scss'
+
+const isMobile = () => window.innerWidth <= 767;
+
 const MoveWindows = ({ children, tab_name, tab_naam, setWindowState }) => {
     const [CheckMinimize, setCheckMinimize] = useState({
         Github:false,
@@ -9,15 +12,19 @@ const MoveWindows = ({ children, tab_name, tab_naam, setWindowState }) => {
         Spotify:false,
         Terminalcli:false
     })
+    const mobile = isMobile();
     return (
         <Rnd default={{
-            x: 450,
-            y: 25,
-            width: "40vw",
-            height: "80vh",
+            x: mobile ? 0 : 450,
+            y: mobile ? 30 : 25,
+            width: mobile ? "100vw" : "40vw",
+            height: mobile ? "85vh" : "80vh",
         }}
-            minWidth={300}
-            minHeight={200}>
+            minWidth={mobile ? window.innerWidth : 300}
+            minHeight={200}
+            disableDragging={mobile}
+            enableResizing={!mobile}
+            bounds="parent">
             <div className="main-content">
                 <div className="nav">
                     <div className="small-buttons">

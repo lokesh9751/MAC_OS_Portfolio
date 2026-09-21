@@ -2,3 +2,15 @@
     background-color: black;
     height: 100vh;
 }
+
+@media (max-width: 767px) {
+    .note-window {
+        height: 100%;
+        overflow-x: auto;
+
+        pre {
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+    }
+}

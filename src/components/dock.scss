@@ -81,4 +81,15 @@
     }
 
     
+    @media (max-width: 767px) {
+        gap: 0.35rem;
+        padding-inline: 0.5rem;
+        padding-block: 0.35rem;
+        bottom: 0.5rem;
+
+        .icons {
+            height: 2.2rem;
+            padding: 0.5rem;
+        }
+    }
 }
